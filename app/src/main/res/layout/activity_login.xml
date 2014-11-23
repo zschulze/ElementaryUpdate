@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity"
+    android:clickable="true"
+    android:id="@+id/relativeLayout"
+    android:background="#c8a6a9a9">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/loginEmail"
+        android:background="#ffffffff"
+        android:textSize="20sp"
+        android:hint="Email Address"
+        android:padding="5dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/loginPassword"
+        android:background="#ffffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/loginEmail"
+        android:layout_alignLeft="@+id/loginEmail"
+        android:layout_alignStart="@+id/loginEmail"
+        android:hint="Password"
+        android:padding="5dp"
+        android:password="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginSubmit"
+        android:onClick="login"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/loginPassword"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="#003bff"
+        android:textColor="#ffffffff"
+        android:minWidth="180dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Elementary Update"
+        android:id="@+id/title"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Helping your child progress"
+        android:id="@+id/moto"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>
