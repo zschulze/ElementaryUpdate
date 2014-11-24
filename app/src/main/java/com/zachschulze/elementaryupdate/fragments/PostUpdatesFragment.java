@@ -29,7 +29,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by Zach on 10/27/2014.
+ * Created by Zach on 11/10/2014.
  */
 public class PostUpdatesFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
@@ -70,8 +70,13 @@ public class PostUpdatesFragment extends Fragment implements View.OnClickListene
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         String item = (String) parent.getItemAtPosition(pos);
-        update += item + " ";
-        et.setText(update);
+        update += item;
+        if (update != "") {
+            item += " ";
+        }
+        String newText = et.getText().toString() + item;
+        et.setText("");
+        et.append(newText);
     }
 
     @Override
